@@ -1,6 +1,9 @@
 #include "blib.h"
 
 int pin;
+int l = 1000;
+int m = 500;
+int s = 250;
 void setPin(int n)
 {
     pin = n;
@@ -15,22 +18,26 @@ void blink(int n)
     for (int i = 0; i < hun; i++)
     {
         digitalWrite(pin, HIGH);
-        delay(1000);
+        delay(l);
         digitalWrite(pin, LOW);
-        delay(1000);
+        delay(l);
     }
     for (int i = 0; i < ten; i++)
     {
         digitalWrite(pin, HIGH);
-        delay(500);
+        delay(m);
         digitalWrite(pin, LOW);
-        delay(500);
+        delay(m);
     }
     for (int i = 0; i < one; i++)
     {
         digitalWrite(pin, HIGH);
-        delay(250);
+        delay(s);
         digitalWrite(pin, LOW);
-        delay(250);
+        delay(s);
     }
 }
+
+void setL(int n) { l = n; }
+void setM(int n) { m = n; }
+void setS(int n) { s = n; }
