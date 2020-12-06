@@ -46,10 +46,42 @@ void blink(int n)
 void blinks(int n)
 {
     int len = sizeof(pins) / sizeof(pins[0]);
-    for (int i = 0; i < len; i++)
+    int one = n % 10;
+    int ten = (n % 100 - one) / 10;
+    int hun = (n % 1000 - ten) / 100;
+
+    for (int i = 0; i < hun; i++)
     {
-        pin = pins[i];
-        blink(n);
+        for (int i = 0; i < len; i++)
+        {
+            digitalWrite(pins[i], HIGH);
+        }
+        delay(l);
+        digitalWrite(pin, LOW);
+        delay(l);
+    }
+    for (int i = 0; i < ten; i++)
+    {
+        for (int i = 0; i < len; i++)
+        {
+            digitalWrite(pins[i], HIGH);
+        }
+        delay(m);
+        digitalWrite(pin, LOW);
+        delay(m);
+    }
+    for (int i = 0; i < one; i++)
+    {
+        for (int i = 0; i < len; i++)
+        {
+            digitalWrite(pins[i], HIGH);
+        }
+        delay(s);
+        for (int i = 0; i < len; i++)
+        {
+            digitalWrite(pins[i], LOW);
+        }
+        delay(s);
     }
 }
 void setL(int n) { l = n; }
