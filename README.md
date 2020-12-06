@@ -1,4 +1,4 @@
-# Blib
+# Blib - Arduino Library
 
 setPin(pin)
 blink(n) where n is a 3 or less than 3 digit integer, each digit corresponds to number of times the LED will blink at a certain speed, by default HIGH times are 1000,500,250 ms corresponding to most significant to least significant
