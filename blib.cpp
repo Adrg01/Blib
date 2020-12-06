@@ -9,6 +9,11 @@ void setPin(int n)
     pin = n;
 }
 
+void setPins(int arr[])
+{
+    int pins[] = arr[];
+}
+
 void blink(int n)
 {
     int one = n % 10;
@@ -38,6 +43,15 @@ void blink(int n)
     }
 }
 
+void blinks(int n)
+{
+    int len = sizeof(pins) / sizeof(pins[0]);
+    for (int i = 0; i < len; i++)
+    {
+        pin = pins[i];
+        blink(n);
+    }
+}
 void setL(int n) { l = n; }
 void setM(int n) { m = n; }
 void setS(int n) { s = n; }

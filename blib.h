@@ -7,5 +7,7 @@ void setPin(int n);
 void setL();
 void setM();
 void setS();
+void setPins(int arr[]);
+void blinks(int n);
 
 #endif
